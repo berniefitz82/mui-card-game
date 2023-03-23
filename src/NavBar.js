@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import SignUpForm from './SignUpForm';
 
 export default function NavBar() {
   return (
@@ -24,8 +25,8 @@ export default function NavBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Card Games
           </Typography>
-          <Button color="inherit">Login</Button>
-		  <Button color="inherit" variant="outlined">Sign Up</Button>
+          <SignUpForm />
+          <Button color="inherit">Login</Button>		  
         </Toolbar>
       </AppBar>
     </Box>
