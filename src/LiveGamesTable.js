@@ -24,7 +24,7 @@ function LiveGamesTable() {
       alignItems="center"
       paddingTop={"25px"}     
     >
-      <TableContainer sx={{ maxWidth: "500px" }} component={Paper}>
+      <TableContainer color="primary" sx={{ maxWidth: "500px" }} component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
