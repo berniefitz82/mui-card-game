@@ -7,12 +7,16 @@ import { CssBaseline } from "@mui/material";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>     
-    <CssBaseline /> 
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <NavBar />
       <LiveGamesTable />
-      <Button color="primary" variant="contained">Primary</Button>
-      <Button color="secondary" variant="contained">Secondary</Button>
+      <Button color="primary" variant="contained">
+        Primary
+      </Button>
+      <Button color="secondary" variant="contained">
+        Secondary
+      </Button>
     </ThemeProvider>
   );
 }

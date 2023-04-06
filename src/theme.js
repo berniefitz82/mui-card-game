@@ -4,13 +4,25 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#386641',
-      dark: '#27472d',
     },
     secondary: {
       main: '#bc4749',
     },
-    background: '#27472d',
   },
+  components: {
+    MuiTableRow: {
+      styleOverrides: {    
+        root: {
+          '&:nth-of-type(odd)': {
+            backgroundColor: 'rgba(0, 0, 0, 0.03)', // set striped rows
+          },
+          '&$selected': {
+            backgroundColor: 'rgba(0, 0, 0, 0.08)', // set highlighted rows
+          },
+        },
+      },
+    }
+  },  
 });
 
 export default theme;
