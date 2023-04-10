@@ -1,4 +1,6 @@
-import { createTheme } from '@mui/material/styles';
+import createTheme from '@mui/material/styles/createTheme';
+import red from '@mui/material/colors/red';
+import green from '@mui/material/colors/green';
 
 const theme = createTheme({
   palette: {
@@ -8,8 +10,19 @@ const theme = createTheme({
     secondary: {
       main: '#bc4749',
     },
+    error: {
+      main: red.A400,
+    },
+    success: {
+      main: green.A400,
+    },
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
   },
   spacing: 2,
+  typography: {
+    fontFamily: "'Lato', sans-serif",
+  },
   components: {
     MuiTableRow: {
       styleOverrides: {
