@@ -7,9 +7,23 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SignUpForm from './SignUpForm';
-import theme from "./theme";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+  useSetRecoilState,
+} from 'recoil';
+import { loggedInState } from './App';
 
 export default function NavBar() {
+  const [loggedIn, setLoggedIn] = useRecoilState(loggedInState);
+
+  function toggleLogStatus() {
+    setLoggedIn((loggedIn) => !loggedIn);
+  } 
+
   return (
     <Box sx={{ flexGrow: 1 }} >
       <AppBar position="static">
@@ -27,9 +41,9 @@ export default function NavBar() {
             Card Games
           </Typography>
           <SignUpForm />
-          <Button color="inherit">Login</Button>		  
+          <Button onClick={toggleLogStatus} color="inherit">{loggedIn ? "Logout" : "Login"}</Button>		  
         </Toolbar>
-      </AppBar>
+      </AppBar>      
     </Box>
   );
 }

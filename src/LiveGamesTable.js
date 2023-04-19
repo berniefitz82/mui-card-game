@@ -1,6 +1,10 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import Box from '@mui/material/Box';
+
+import { useRecoilValue } from 'recoil';
+import { loggedInState } from './App';
+
 function generateTablesData(numRows) {
   const data = [];
   for (let i = 0; i < numRows; i++) {
@@ -15,9 +19,12 @@ function generateTablesData(numRows) {
 }
 
 function LiveGamesTable() {
+  const loggedInStatus = useRecoilValue(loggedInState);
   const data = generateTablesData(5);
 
   return (
+    <>
+    {loggedInStatus &&
     <Box
       display="flex"
       justifyContent="center"
@@ -44,7 +51,8 @@ function LiveGamesTable() {
           </TableBody>
         </Table>
       </TableContainer>
-    </Box>
+    </Box>}
+    </>
   );
 }
 
