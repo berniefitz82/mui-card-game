@@ -12,6 +12,7 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
+import PlayingCard from "./PlayingCard";
 
 export const loggedInState = atom({
   key: 'loggedInState',
@@ -32,7 +33,7 @@ function App() {
           <Button color="secondary" variant="contained">
             Secondary
           </Button>
-        </Box>
+        </Box>        
       </ThemeProvider>
     </RecoilRoot>
   );

@@ -40,12 +40,12 @@ function PlayingCard({ suit, value }) {
     }
   }
 
-  useEffect(() => {
-    suit === "Hearts" || suit === "Diamonds"
-      ? setSuitColor("red")
-      : setSuitColor("black");
-  }, [suit]);
-
+  if ((suit === "Hearts" || suit === "Diamonds") && suitColor != "red") {
+    setSuitColor("red")
+  } else if ((suit === "Spades" || suit === "Clubs") && suitColor != "black") {
+    setSuitColor("black")
+  }
+  
   return (
     <Box sx={{ transformStyle: "preserve-3d" }}>
       <Paper
