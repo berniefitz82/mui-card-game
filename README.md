@@ -8,5 +8,3 @@ To run the site:
 - npm start
 
 This site was built using Create React App
-
-Consider visiting my blog at [Bernies Learnings](https://bernieslearnings.com) to support my work

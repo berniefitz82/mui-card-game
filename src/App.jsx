@@ -1,18 +1,15 @@
-import LiveGamesTable from "./LiveGamesTable";
-import NavBar from "./NavBar";
-import ThemeProvider from "@mui/system/ThemeProvider";
-import theme from "./theme";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
+import ThemeProvider from "@mui/system/ThemeProvider";
 import {
   RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
+  atom
 } from 'recoil';
+import LiveGamesTable from "./LiveGamesTable";
+import NavBar from "./NavBar";
 import PlayingCard from "./PlayingCard";
+import theme from "./theme";
 
 export const loggedInState = atom({
   key: 'loggedInState',
@@ -33,6 +30,7 @@ function App() {
           <Button color="secondary" variant="contained">
             Secondary
           </Button>
+          <PlayingCard suit={"Hearts"} value={"A"} />
         </Box>        
       </ThemeProvider>
     </RecoilRoot>
